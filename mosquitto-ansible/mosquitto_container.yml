@@ -1,0 +1,23 @@
+---
+- name: create a container based on the official mosquitto image
+  hosts: localhost
+  connection: local
+  become: yes
+  become_method: sudo
+  gather_facts: no
+
+  tasks:
+    - name: Tear down existing services
+      community.docker.docker_compose:
+        project_src: mosquitto-docker
+        state: absent
+
+    - name: Create and start services
+      community.docker.docker_compose:
+        project_src: mosquitto-docker
+        state: present
+      register: output
+
+    - ansible.builtin.debug:
+        var: output
+...

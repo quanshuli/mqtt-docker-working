@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    volumes:
+      - . :/usr/share/nginx/html/
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
