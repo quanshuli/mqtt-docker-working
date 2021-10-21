@@ -17,7 +17,6 @@
         source: build
       #register: output
         
-
     - name: start the container and run the script inside
       community.docker.docker_container:
         name: python-paho-container
