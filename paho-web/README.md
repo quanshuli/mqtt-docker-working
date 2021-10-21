@@ -1,10 +1,12 @@
 running:
 ./paho-web-docker
+- using docker 
 - sudo docker build -t web-tag . 
 - sudo docker run --name web-app -d -p 8080:80 web-tag 
 
 or 
 ./ 
+- using ansible
 - ansible-playbook paho-web-ansible.yml -K
 
 Requirements to run the script:
