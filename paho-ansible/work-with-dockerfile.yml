@@ -18,7 +18,7 @@
       #register: output
         
 
-    - name: run the script
+    - name: start the container and run the script inside
       community.docker.docker_container:
         name: python-paho-container
         image: python-paho:latest
