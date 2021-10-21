@@ -1,9 +1,11 @@
 running: 
 ./mqtt-docker 
+- using docker-compose.yml
 - sudo docker-compose up -d 
 
 or 
 ./ 
+- using ansible
 - ansible-playbook paho-python-ansible.yml -K 
 
   
