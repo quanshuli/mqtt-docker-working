@@ -1,7 +1,7 @@
 ./paho-web
 - this directory is the web sever container, in this container the web app is receiving the signals.
 
-./paho-ansible
+./paho-python
 - this directory is the signal sending container, in which paho-mqtt python package is used to send the signals.
 
 ./mosquitto-ansible
