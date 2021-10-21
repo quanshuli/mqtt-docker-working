@@ -7,7 +7,7 @@ or
 ./
 - ansible-playbook mosquitto_ansible.yml -K (without docker-compose.yml)
 
-or with docker compose
+or 
 - ansible-playbook mosquitto-container.yml
 
 
