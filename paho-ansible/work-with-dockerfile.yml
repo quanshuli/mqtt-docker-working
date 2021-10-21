@@ -2,13 +2,13 @@
 # this version work with dockerfile
 # replaceing docker-compose.yml
 #
-- name: Run using a project directory
+- name: build and run python paho-mqtt container
   hosts: localhost
   become: yes
   become_method: sudo
   gather_facts: no
   tasks:
-    - name: create a python container
+    - name: create a python image
       community.docker.docker_image:
         name: python-paho
         build:
