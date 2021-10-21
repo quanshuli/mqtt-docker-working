@@ -4,7 +4,7 @@ running:
 
 or 
 ./ 
-- ansible-playbook work-with-dockerfile.yml -K 
+- ansible-playbook paho-python-ansible.yml -K 
 
   
 Requirements to run the script:
