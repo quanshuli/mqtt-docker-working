@@ -3,6 +3,10 @@ running:
 - sudo docker build -t web-tag . 
 - sudo docker run --name web-app -d -p 8080:80 web-tag 
 
+or 
+./ 
+- paho-web-ansible.yml
+
 Requirements to run the script:
 - Docker Engine
 - Docker API >= 1.20

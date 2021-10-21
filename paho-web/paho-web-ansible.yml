@@ -1,0 +1,36 @@
+---
+# web container to receive signals sent 
+# by the python paho-mqtt
+# localhost: 
+- name: web app container
+  hosts: localhost
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  tasks:
+    - name: create a nginx container using dockerfile
+      community.docker.docker_image:
+        name: web-paho 
+        build: 
+          path: ./paho-web-docker 
+        state: present
+        source: build
+
+    - name: start the container 
+      community.docker.docker_container:
+        name: web-paho-container
+        image: web-paho:latest 
+        volumes:
+          - ./paho-web-docker:/usr/share/nginx/html/
+        working_dir: /usr/share/nginx/html/
+        detach: yes
+        exposed_ports:
+         - 80
+        published_ports: 
+          - 8080:80
+        state: started
+      register: output
+
+    - ansible.builtin.debug:
+        var: output 
+...
