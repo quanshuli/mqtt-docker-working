@@ -28,6 +28,7 @@
           - 80
         published_ports: 
           - 8080:80
+        # use localhost:8080 to visit the page
         state: started
       register: output
 
