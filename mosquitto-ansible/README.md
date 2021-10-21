@@ -5,7 +5,11 @@ running commands:
 
 or 
 ./
-- ansible-playbook mosquitto_container.yml -K 
+- ansible-playbook mosquitto_ansible.yml -K (without docker-compose.yml)
+
+or with docker compose
+- ansible-playbook mosquitto-container.yml
+
 
 Requirements to run the script:
 - Docker Engine
