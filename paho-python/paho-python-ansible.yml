@@ -1,6 +1,6 @@
 ---
 # this version work with dockerfile
-# replaceing docker-compose.yml
+# replacing docker-compose.yml
 #
 - name: build and run python paho-mqtt container
   hosts: localhost
