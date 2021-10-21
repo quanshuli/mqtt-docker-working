@@ -5,7 +5,7 @@ running:
 
 or 
 ./ 
-- paho-web-ansible.yml
+- ansible-playbook paho-web-ansible.yml -K
 
 Requirements to run the script:
 - Docker Engine
