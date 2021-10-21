@@ -25,7 +25,7 @@
         working_dir: /usr/share/nginx/html/
         detach: yes
         exposed_ports:
-         - 80
+          - 80
         published_ports: 
           - 8080:80
         state: started
