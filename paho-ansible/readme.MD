@@ -4,8 +4,8 @@ running:
 
 or 
 ./ 
-- ansible-playbook mqtt-ansible.yml -K 
-- passing but not sending signals. 
+- ansible-playbook work-with-dockerfile.yml -K 
+
   
 Requirements to run the script:
 - Docker API >= 1.20

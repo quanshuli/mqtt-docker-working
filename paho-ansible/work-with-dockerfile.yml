@@ -1,0 +1,40 @@
+---
+# this version work with dockerfile
+# replaceing docker-compose.yml
+#
+- name: Run using a project directory
+  hosts: localhost
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  tasks:
+    - name: create a python container
+      community.docker.docker_image:
+        name: python-paho
+        build:
+          path: ./mqtt-docker
+        state: present
+        source: build
+      #register: output
+        
+
+    - name: run the script
+      community.docker.docker_container:
+        name: python-paho-container
+        image: python-paho:latest
+        detach: yes
+        #working_dir: /code
+        command: python websocks-send-number.py
+        #state: started
+        #volumes:
+        #  - ./mqtt-docker:/code
+        #ports:
+        #  - 5000:5000
+        #publish_all_ports: yes
+        #image: python:3
+        #output_logs: yes
+      register: output
+
+    - ansible.builtin.debug:
+        var: output
+...
