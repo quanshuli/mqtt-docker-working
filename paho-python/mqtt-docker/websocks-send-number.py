@@ -22,7 +22,7 @@ port = 9001
 sub_topic = "test"
 
 # Create client object
-client= mqtt.Client("publish-socks", transport='websockets')       
+client = mqtt.Client("publish-socks", transport='websockets')       
 #client= paho.Client("publish-socks") # no websocket
 
 # Establish connection
